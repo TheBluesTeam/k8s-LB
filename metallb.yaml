@@ -392,16 +392,3 @@ spec:
         runAsUser: 65534
       serviceAccountName: controller
       terminationGracePeriodSeconds: 0
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: config
-  namespace: metallb-system
-data:
-    config: |
-        address-pools:
-        - name: metalLB ip-range
-          protocol: layer2
-          addresses:
-          - 192.168.95.101-192.168.95.200
